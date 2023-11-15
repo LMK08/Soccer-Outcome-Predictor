@@ -49,5 +49,10 @@ I used a series of different machine learning models as set to the task of class
 
 The CatBoost model performed the best on the numeric data with an F1 score of .454. As CatBoost has the additional benefit of being able to interepret the categorical features in my dataset without have to one hot encode, I proceeded with using this type of model. 
 
+The additional of the categorical features: referee, home_team, and away_team, as well as further tuning bumped the F1 score up to .469. Through further evaluation of the results, this score is brought down signficantly by the accuracy of predicting draws. The model does a good job of predicting away wins at a .603 accuracy, and a fantastic job of predicting home wins, .759 accuracy, but a terrible job of predicting draws, at tiny .018 accuracy score.
+
+It is also important to extract the feature importance for this type of model. Knowing what features impact match results can lead to actionable insights for coaching staffs. For this model, home and away team elo ratings were 2 of the top 3 features in terms of importance, which checks out, as elo rating is supposed to be a rolling value for the strength of a team. Interestingly, home and away form are also two of the more signficant features, indicating that form or hot streaks may not only exist, but matter more than a teams current position in the table.
+
+
 
 
